@@ -5,8 +5,8 @@ import { Mysql } from 'src/mysql/mysql';
 export class UserServiceService {
   constructor(private readonly mysql: Mysql) { }
 
-  createUser(name: String) {
-    let db = this.mysql
-
+  async createUser(name: String) {
+    let db = this.mysql.getConnection()
+    let res = await db.query("select * from user")
   }
 }

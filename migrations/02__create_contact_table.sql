@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS contact_info (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    contact_number TEXT NOT NULL
+)
