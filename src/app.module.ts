@@ -8,7 +8,7 @@ import { ConfigModule } from '@nestjs/config';
 @Module({
   imports: [ConfigModule.forRoot()],
   controllers: [AppController],
-  providers: [AppService, Mysql],
+  providers: [AppService, Mysql, UserServiceService],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
