@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { NextFunction } from 'express';
 import { Mysql } from './mysql/mysql';
 import { ConfigModule } from '@nestjs/config';
+import { UserServiceService } from './user-service/user-service.service';
 
 @Module({
   imports: [ConfigModule.forRoot()],
