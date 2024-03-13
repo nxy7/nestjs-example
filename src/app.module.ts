@@ -2,11 +2,12 @@ import { Injectable, MiddlewareConsumer, Module, NestMiddleware, NestModule } fr
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { NextFunction } from 'express';
+import { Mysql } from './mysql/mysql';
 
 @Module({
   imports: [],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, Mysql],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
